@@ -4,7 +4,7 @@ const fs = require('fs');
 
 
 const app = express();
-const PORT = process.env.port || 3001;
+const port = process.env.PORT || 3001;
 
 
 
@@ -46,4 +46,4 @@ app.delete('/api/notes/:id', (req, res) => {
     res.json(noteList);
 })
 
-app.listen(PORT, () =>console.log(`Example app listening at http://localhost:${PORT}`))
+app.listen(port, () =>console.log(`Example app listening at http://localhost:${port}`))
