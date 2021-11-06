@@ -1,14 +1,12 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const { application } = require('express');
-const { clog } = require('./middleware/clog')
+
 
 const app = express();
 const PORT = process.env.port || 3001;
 
-//Import custom middleware, "cLog"
-app.use(clog);
+
 
 // Middleware for parsing JSON and urlencoded form data
 app.use(express.json());
